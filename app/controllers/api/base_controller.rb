@@ -1,10 +1,12 @@
 module Api
   class BaseController < ApplicationController
+
     protect_from_forgery with: :null_session
     before_action :set_resource, only: [:destroy, :show, :update]
     respond_to :json
 
     private
+
     def get_resource
       instance_variable_get("@#{resource_name}")
     end
