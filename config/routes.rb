@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'artists/index'
-  root to: 'artists#index'
+
+  root to: 'api/artists#index'
 
   namespace :api do
     resources :albums, :artists
