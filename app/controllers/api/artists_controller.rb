@@ -1,7 +1,7 @@
 module Api
   class ArtistsController < ApplicationController
 
-  	respond_to :json
+  	respond_to :json, :html
 
   	def index
       @artists = Artist.where(query_params).page(params[:page]).per(10)
